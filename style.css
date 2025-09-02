@@ -52,3 +52,12 @@
 .linkextremo {
     font-size: 100px;
 }
+
+.click {
+    height: 10%;
+    width: 5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; 
+
+}
