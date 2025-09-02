@@ -1,0 +1,54 @@
+* {
+  text-align: center;  
+}
+
+.body1 {
+    background-color: lightblue;
+}
+
+.body2 {
+    background-color: black;
+}
+
+.lorem {
+  color: red;
+  text-shadow:hsl(from color h s l);
+}
+
+.lore {
+    font-size: 100px;
+}
+.espacio {
+    padding-top: -50px;
+}
+
+.agrandar {
+    font-size: 100px;
+}
+
+.color {
+    color: white;
+    font-size: 50px;
+    font-family:cursive ;
+}
+
+.tenna {
+    background:linear-gradient(red,yellow,green,blue);
+}
+
+.rotar {
+ animation: spin 1s linear infinite; /* Apply 'spin' animation */
+}
+
+@keyframes spin {
+        0% {
+            transform: rotate(0deg); /* Start at 0 degrees */
+        }
+        100% {
+            transform: rotate(360deg); /* Rotate to 360 degrees */
+        }
+}
+
+.linkextremo {
+    font-size: 100px;
+}

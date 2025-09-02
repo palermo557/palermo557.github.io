@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="body1">
+    <section class="centrar">
+    <p> 
+        <b class="lore">SE BUSCA</b><br>
+        <img class="espacio" src="image.jpg" width="1500" height="200" alt="El momo"><br>
+        <b>REcompensa 5Kromer</b><img id="slideshow" src="Untitled.png">
+        
+    </p>
+    <select class="agrandar">
+        <option value="" selected disabled>Género</option>
+        <option value="option1">Hombre</option>
+        <option value="option2">Mujer</option>
+        <option value="option3">Spamton</option>
+        <option value="option4">Freedom</option>
+    </select>
+    </section>
+    <a href="contacto.html">¡Contactanos aquí!</a><br><br><br><br><br><br><br>
+    <a href="tenna.html">MIKEEEE</a>
+
+<script>
+  const images = ["Untitled.png", "martin.png"];
+  let index = 0;
+
+  function changeImage() {
+    index = (index + 1) % images.length;
+    document.getElementById("slideshow").src = images[index];
+  }
+
+  setInterval(changeImage, 1);
+</script>
+
+</body>
+</html>
