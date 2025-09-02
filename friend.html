@@ -6,11 +6,31 @@
     <title>FRIEND INSIDE ME</title>
     <link href="style.css" rel="stylesheet">
     <style>
-        body {background-color: black;}
+        body {background-color: black; display: flex; justify-content: center;align-items: center; position: relative;}
+        #click {
+            position: absolute; right: 50px; top: 50%;
+        }
         body img { width: 44.7%; height: 100%;}
     </style>
 </head>
 <body>
-    <img class="center" src="friend.jpg" alt="FRIEND">
+    <audio id="friends" autoplay loop><source src="friendmus.mp3"></audio>
+    <img class="center" src="friend.jpg" alt="FRIEND"><img id="click" src="click.jpg" alt="hace click" class="click">
+    <script>
+    const audio = document.getElementById("friends");
+
+    audio.play().catch(err => console.log("Autoplay blocked:", err));
+
+    function enableSound() {
+      audio.muted = false;    
+      audio.volume = 1.0;    
+      audio.play();           
+      document.removeEventListener("click", enableSound);
+      document.removeEventListener("keydown", enableSound);
+    }
+
+    document.addEventListener("click", enableSound);
+    document.addEventListener("keydown", enableSound);
+  </script>
 </body>
 </html>
