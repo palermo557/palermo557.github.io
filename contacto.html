@@ -5,9 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
     <link href="style.css" rel="stylesheet">
+    <style>
+        #jevil {
+            position: absolute; right: 50px; top: 50%; width: 10%; height: 20%;
+        }
+    </style>
 </head>
 <body class="body2">
-    <img class="center" src="roulxs.gif" width= 58%; height= 38%;>
+    <img id="jevil" src="jevil.gif">
+    <img class="center" src="roulxs.gif"; width= 54%; height= 34%;>
     <p class="color">Se pronuncia "Pablo Romero"</p>
+    <audio id="roulxs" autoplay loop><source src="hipshop.mp3"></audio>
+    <audio id="jevils" src="jevils.mp3"></audio>
+
+
+<script>
+    const audio = document.getElementById("roulxs");
+    const jevil = document.getElementById("jevil");
+    const sonidoj = document.getElementById("jevils");
+
+    audio.play().catch(err => console.log("Autoplay blocked:", err));
+
+    function enableSound() {
+      audio.muted = false;    
+      audio.volume = 1.0;    
+      audio.play();           
+      document.removeEventListener("click", enableSound);
+      document.removeEventListener("keydown", enableSound);
+    }
+
+    document.addEventListener("click", enableSound);
+    document.addEventListener("keydown", enableSound);
+
+    jevil.addEventListener("click", () => {
+      sonidoj.currentTime = 0;
+      sonidoj.play();
+    })
+</script>
 </body>
 </html>
